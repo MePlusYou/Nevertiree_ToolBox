@@ -1,0 +1,30 @@
+\documentclass[UTF8]{ctexart}
+
+\title{掰开揉碎看Normal Equation}
+\author{王凌霄}
+\date{\today}
+
+\bibliographystyle{plain}
+
+\usepackage[greek,english]{babel}
+\usepackage{amsmath}
+
+\newcommand\Emph{\textbf}
+
+\begin{document}
+
+\maketitle
+
+%前言
+\paragraph{\indent Normal Equation是一种基础的最小二乘方法，本文将从线性代数的角度来分析Normal Equation（而不是从矩阵求导的角度）。}
+
+\paragraph{\indent 很多作者在推导公式的时候有意无意的忽略了内心的思考过程，只留下漂亮的步骤。这样的文风让很多读者跟不上节奏，最后一头雾水似懂、非懂。本文将从求解方程组入手，再讲讲投影的使用，最后进入到Normal Equation的应用。我的目的是让读者对$\overrightarrow{\theta}$=$A(A^T A)^{-1}A^T$ $\overrightarrow{y}$这个公式有一个big picture，即使日后忘记了这个公式也可以快速推出。}
+
+\section{$Ax=b$ 对付无解的问题}
+\paragraph{先看一个在R2中的例子}
+\begin{quote}
+	例1.0 求一个常数\theta 使 \theta a = b
+\end{quote}
+\section{投影:完美解和最优解}
+\section{Normal Equation:应用与实现}
+\end{document}
