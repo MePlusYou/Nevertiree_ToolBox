@@ -16,7 +16,9 @@ val x:Int = 5
 
 ## 2.变量赋值
 
+```scala
 var <name>:<type>=<literal>
+```
 
 同上，变量赋值也可以写成`var <name> = <literal>`。
 
@@ -47,3 +49,31 @@ val approx = 335/113f
 println(s"pi,using 335/113 ,is about $approx")
 
 ```
+
+大括号内插表示法
+
+```scala
+
+val item = "apple"
+
+s"How do you like them ${item}s?"
+
+s"Fish n chips n vineger,${"pepper"*3}salt"
+
+```
+
+f表示法
+
+```scala
+
+val item = "apple"
+
+f"I wrote a new $item%.3s today"
+
+f"Enjoying this $item ${335/113.0}%.5f times today"
+
+```
+
+## 5.Regex
+
+
