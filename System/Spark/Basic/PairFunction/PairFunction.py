@@ -13,8 +13,9 @@ dataPair = sc.parallelize([("panda",0),("pink",3),("pirate",3),("panda",1),("pin
 # filter : second element larger than 2
 dataPair.filter(lambda x : x[1] > 2)
 
-# calculate the avg
+# mapValue(func)   is same to   map{case(x,y) : (x,func(y))}
 avg = dataPair.mapValues(lambda x:(x,1)).reduceByKey(lambda x,y:(x[0]+y[0],x[1]+y[1]))
+# calculate the avg
 print avg.collect()
 
 # count word
