@@ -42,4 +42,4 @@ tar -xf spark-1.2.0-bin-hadoop2.4.tgz
 
 5.[PairRDD](CreatePair)可以由RDD通过map方式生成，也可以从数据中生成。
 
-6.PairRDD也属于RDD，所以RDD有的操作PairRDD也有。
+6.PairRDD也属于RDD，所以RDD有的操作PairRDD也有。如果说每门语言都有一个Hello World话，那么每个分布式系统的第一课都要是Word Count。现在我们终于可以完成一个简单[词频统计Python](PairFunction/counter.py)了。
