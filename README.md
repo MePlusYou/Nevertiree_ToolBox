@@ -4,7 +4,7 @@
 
 ## [编程语言](Language)
 
-收录的编程语言包括跑的比谁都快的C/C++，面向对象的Java和Python，函数式编程家族的Haskell、Scala和Lisp，科学计算类的R和Matlab以及胶水工具Linux Shell。
+收录的编程语言包括跑的比谁都快的C/C++，面向对象的Java和Python，函数式编程家族的Haskell、Scala和Lisp，科学计算类的R和Matlab。
 
 > 1.[C/C++](Language/C++)
 
@@ -20,9 +20,7 @@
 
 > 7.[Matlab](Language/Matlab)
 
-> 8.[Linux Shell](Language/Shell)
-
-> 9.[Lisp](Language/Lisp)
+> 8.[Lisp](Language/Lisp)
 
 ## [系统](System)
 
@@ -31,3 +29,12 @@
 >1.[Linux](System/Linux)
 
 >2.[Spark](System/Spark)
+
+## [数据库](DataBase)
+
+收录几种最经常用的数据库，以及用于拓展概念的NoSQL数据库。
+
+>1.[MySQL](DataBase/Mysql)
+
+>2.[Oracle](DataBase/Oracle)
+
