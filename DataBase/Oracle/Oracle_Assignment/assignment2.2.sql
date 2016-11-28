@@ -1,5 +1,5 @@
 -- *******************************************
--- * DDL DML DCL 实验*
+-- *********** DDL DML DCL 实验***************
 -- *******************************************
 
 -- create user
@@ -115,8 +115,8 @@ select table_name from user_tables where table_name = 'RENTAL';
 ------------------------------
 CREATE TABLE RESERVATION(
   RES_DATE DATE,
-  MEMBER_ID NUMBER(10) constraint reservation_member_pk references MEMBER(MEMBER_ID),
-  TITLE_ID NUMBER(10) constraint reservation_title_pk references TITLE(TITLE_ID),
+  MEMBER_ID NUMBER(10) constraint reservation_member_fk references MEMBER(MEMBER_ID),
+  TITLE_ID NUMBER(10) constraint reservation_title_fk references TITLE(TITLE_ID),
   constraint reservation_pk primary key (RES_DATE,MEMBER_ID,TITLE_ID)
 );
 -- check whether current table is created successfully.
