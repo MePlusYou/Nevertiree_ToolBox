@@ -66,6 +66,7 @@ create table TITLE(
     -- RELEASE_DATE
     RELEASE_DATE DATE not null
 );
+
 -- check whether current table is created successfully.
 describe TITLE;
 select table_name from user_tables where table_name = 'TITLE';

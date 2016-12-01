@@ -39,3 +39,15 @@ values('Se7en','Two detectives, a rookie and a veteran, hunt a serial killer who
 
 select * from TITLE order by TITLE_ID;
 select * from TITLE where TITLE = 'Se7en';
+
+
+-----------------------
+-- COPY_ID_INCREMENT---
+-----------------------
+create or replace trigger COPY_ID_INCREMENT
+	before insert
+	on TITLE_COPY
+	for each row
+	begin
+		select COPY_ID_SEQ.Nextval into :new.COPY_ID from dual;
+	end;
