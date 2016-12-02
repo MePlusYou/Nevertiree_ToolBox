@@ -11,7 +11,7 @@ public class Graph{
 	public Graph(int V){
 		this.vertex = V;
 		this.edge = 0;
-		adjacent = (Bag<Integer>[]) new Bag[V];
+		adjacent = (Bag<Integer>[]) new Bag<Integer>[V];
 		for (int v=0;v<V ;v++) {
 			adjacent[v] = new Bag<Integer>();
 		}
