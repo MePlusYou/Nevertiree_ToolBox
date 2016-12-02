@@ -1,4 +1,4 @@
-public class DepthFirstSearch extends Graph{
+public class DepthFirstSearch{
 	// whether the vertex is called dfs.
 	private boolean[] isMarked;
 	// start point.

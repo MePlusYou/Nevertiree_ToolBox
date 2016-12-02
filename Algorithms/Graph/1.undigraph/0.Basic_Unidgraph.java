@@ -32,7 +32,6 @@ public class Graph{
 		}
 	}
 
-
 	public int getVertexNum(){
 		return vertex;
 	}

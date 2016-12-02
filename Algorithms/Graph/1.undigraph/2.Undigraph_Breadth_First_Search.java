@@ -1,4 +1,5 @@
-public class BreadthFirstSearch extends Graph{
+public class BreadthFirstSearch{
+	// whether the vertex is called dfs.
 	private boolean[] isMarked;
 	private int count;
 	private int[] edgeTo;
