@@ -1,38 +1,32 @@
 # Java
 
-## Java基本内容
+## [Java基本内容](Introduction)
 
-1.Java基本类型
+介绍Java的基本概念。包括JVM、JRE、JDK，以及基础类型和基础语法。
 
-2.Java控制流
+## [Java面向对象](OOP)
 
-## Java面向对象
+先简单介绍Java的类，然后介绍面向对象的基本概念封装、继承和多态，最后涉及到一部分设计模式。
 
-0.类
+## [Java容器类](Collections)
 
-1.封装
+介绍Java容器，包括List、Map、Set等。
 
-2.继承
+## [Java异常](Exception)
 
-3.多态
+## Java [I/O](IO)
 
-4.设计模式
-
-## Java容器类
-
-## Java I/O
+Java的文件输入输出和JDBC
 
 ## Java附属功能
 
-1.Java Regex
+正则表达式、安全性等
 
-2.Java Security
-
-## Java 高级功能
+## [Java高级功能](Advanced)
 
 1.Java Streaming
 
-## Java小项目
+## [Java小项目](Project)
 
 > 参考书目
 
