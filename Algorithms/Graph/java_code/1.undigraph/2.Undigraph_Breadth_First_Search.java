@@ -24,7 +24,7 @@ public class BreadthFirstSearch{
 		// queue
 		while(!queue.isEmpty()){
 			int v = queue.dequeue();
-			for (int w : g.adj())
+			for (int w : g.adj(v))
 				if(!isMarked[w]){
 					edgeTo[w] = v;
 					isMarked[w] = true;
