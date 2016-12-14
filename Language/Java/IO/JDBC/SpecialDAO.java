@@ -1,5 +1,3 @@
-import BaseDAO;
-
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -35,7 +33,7 @@ public class SpecialDAO extends BaseDAO {
         return flag;
     }
 
-    public static String queryUserByName(String name){
+    public String queryUserByName(String name){
         ResultSet resultSet=null;
         String majorid = null;
         String queryMajorByDetail="SELECT no AS userNo FROM user WHERE name=?";
@@ -49,10 +47,13 @@ public class SpecialDAO extends BaseDAO {
 
         }catch (SQLException e){e.printStackTrace();}
         finally {
-            //closeMysql(connection);
+            closeMysql(connection);
             return userNo;
         }
 
     }
+
+
+
 
 }

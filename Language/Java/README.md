@@ -6,8 +6,6 @@
 
 2.Java控制流
 
-> 参考《Thinking in Java》和《Java Puzzle》
-
 ## Java面向对象
 
 0.类
@@ -35,3 +33,15 @@
 1.Java Streaming
 
 ## Java小项目
+
+> 参考书目
+
+> 1.《Thinking in Java》
+
+> 2.《Java Puzzle》
+
+> 3.《Effective Java》
+
+> 4.《Java 8 实战》
+
+> 5.《Java程序员修炼之道》

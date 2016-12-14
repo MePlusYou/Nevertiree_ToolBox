@@ -60,7 +60,7 @@ public class UserDAO extends BaseDAO {//implements
 		} finally {
 			this.close(conn);
 		}
-		
+
 		return arr;
 	}
 }
