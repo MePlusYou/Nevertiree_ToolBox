@@ -1,4 +1,6 @@
-[csdn](http://blog.csdn.net/luyee2010/article/details/8466146)
+[csdn1](http://blog.csdn.net/luyee2010/article/details/8466146)
+
+[csdn2](http://blog.csdn.net/wind520/article/details/38638031)
 
 一，安装MySQL 
 sudo apt-get install mysql-server 
