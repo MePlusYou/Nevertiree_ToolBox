@@ -3,16 +3,18 @@
 [csdn2](http://blog.csdn.net/wind520/article/details/38638031)
 
 一，安装MySQL 
-sudo apt-get install mysql-server 
-可能还要
-sudo apt-get install mysq
+
 
 首先用root登陆给Hive用户赋予权限
 
-$MySQL -u root -p111111
-mysql> GRANT ALL PRIVILEGES ON *.* TO hive@localhost IDENTIFIED BY "hive123";
+```shell
+MySQL -u root -p111111
 
+```
 
+```sql
+GRANT ALL PRIVILEGES ON hive.* TO hive@localhost IDENTIFIED BY "hive";
+```
 
 2，安装hive；
 
@@ -20,13 +22,38 @@ $ tar zxvf hive-0.8.1.tar.gz
 
 在/etc/profile中添加;
 
-export HADOOP_HOME=/home/sina/Hadoop/
-export HIVE_HOME=/home/sina/hive/
+```shell
+export HADOOP_HOME=/usr/local/hadoop
+export HIVE_HOME=/usr/local/hive
 export PATH=$PATH:$HADOOP_HOME/bin:$HIVE_HOME/bin
+```
 
-.  /etc/profile生效（.与/etc/profile之间用空格哦）
+生效（.与/etc/profile之间用空格哦）
+
+```shell
+source /etc/profile
+.  /etc/profile
+```
+
+三，拷贝mysql-connector-Java-5.1.13.jar到hive的lib目录下
+
+download mysql-connector-java
+
+```
+cd /usr/local/hive/lib
+
+sudo wget http://central.maven.org/maven2/mysql/mysql-connector-java/6.0.5/mysql-connector-java-6.0.5.jar
+```
 
 
+四，修改配置hive-site.xml
+
+```shell
+cd /usr/local/hive/conf
+vim hive-site.xml
+```
+
+[hive-site.xml](hive-site.xml)
 
 启动hive，可以用起来了吧；、
 
@@ -50,34 +77,7 @@ hive1
 Time taken: 0.182 seconds
 hive> 
 
-三，拷贝mysql-connector-Java-5.1.13.jar到hive的lib目录下
 
-四，修改配置hive-site.xml
-
-主要修改点：
-
-<property>
-  <name>javax.jdo.option.ConnectionURL</name>
-  <value>jdbc:mysql://localhost:3306/hive?createDatabaseIfNotExist=true</value>
-  <description>JDBC connect string for a JDBC metastore</description>
-</property>
-<property>
-  <name>javax.jdo.option.ConnectionDriverName</name>
-  <value>com.mysql.jdbc.Driver</value>
-  <description>Driver class name for a JDBC metastore</description>
-</property>
-
-<property>
-  <name>javax.jdo.option.ConnectionUserName</name>
-  <value>hive</value>
-  <description>username to use against metastore database</description>
-</property>
-
-<property>
-  <name>javax.jdo.option.ConnectionPassword</name>
-  <value>111111</value>
-  <description>password to use against metastore database</description>
-</property>
 
 好了推出hive，在起启动hive
 
