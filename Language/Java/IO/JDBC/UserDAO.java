@@ -21,7 +21,7 @@ public class UserDAO extends BaseDAO {//implements
 	}
 	public int totalCount(String keyword) {
 		int r = 0;
-		Connection conn = this.open();
+		Connection conn = this.connectMysql();
 		try {
 			String sql = "select count(*) from my_user where name like ?";
 			String v = "%"+keyword+"%";

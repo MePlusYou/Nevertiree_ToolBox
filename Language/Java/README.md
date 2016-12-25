@@ -35,7 +35,7 @@
 
 ## [Java异常](Exception)
 
-## Java [I/O](IO)
+## [I/O](IO)
 
 Java的文件输入输出和JDBC
 
