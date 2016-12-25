@@ -6,21 +6,19 @@
 
 收录的编程语言包括跑的比谁都快的C/C++，面向对象的Java和Python，函数式编程家族的Haskell、Scala和Lisp，科学计算类的R和Matlab。
 
-> 1.[C/C++](Language/C++)
+<table>
+	<tr>
+		<td><a href="Language/C++">C/C++</a></td>
+		<td><a href="Language/Java">Java</a></td>
+		<td><a href="Language/Python">Python</a></td>
+		<td><a href="Language/Scala">Scala</a></td>
+		<td><a href="Language/Haskell">Haskell</a></td>
+		<td><a href="Language/R">R</a></td>
+		<td><a href="Language/Matlab">Matlab</a></td>
+		<td><a href="Language/Lisp">Lisp</a></td>
+	</tr>
+</table>
 
-> 2.[Java](Language/Java)
-
-> 3.[Python](Language/Python)
-
-> 4.[Scala](Language/Scala)
-
-> 5.[Haskell](Language/Haskell)
-
-> 6.[R](Language/R)
-
-> 7.[Matlab](Language/Matlab)
-
-> 8.[Lisp](Language/Lisp)
 
 ## [系统](System)
 
