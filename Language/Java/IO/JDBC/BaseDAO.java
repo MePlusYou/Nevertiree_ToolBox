@@ -16,10 +16,10 @@ public class BaseDAO {
     public static Connection connectMysql(){
         try {
             //load the jdbc driver class of mysql
-            Class.forName("com.mysql.jdbc.Driver");
+            Class.forName("com.mysql.cj.jdbc.Driver");
 
             return DriverManager.getConnection(
-                    "jdbc:mysql://localhost:3306/????",
+                    "jdbc:mysql://localhost:3306/database?useUnicode=true&characterEncoding=utf-8&useSSL=false&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC",
                     "username","password");
         }catch (Exception e) {e.printStackTrace();}
         return null;
