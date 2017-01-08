@@ -3,15 +3,15 @@
 ---------------------
 
 -- version 1
-create or replace procedure AUTO_RETURN_BOOK as
+create or replace procedure AUTO_RETURN_BOOK_wlx303 as
 	begin
-		update TITLE_COPY set STATUS = 'AVAILABLE'
+		update TITLE_COPY_WLX303 set STATUS = 'AVAILABLE'
 		where STATUS = 'RENTED'
 		and exists
-		(select RENTAL.TITLE_ID,RENTAL.COPY_ID from RENTAL
-			where RENTAL.EXP_RET_DATE > sysdate
-			and RENTAL.TITLE_ID = TITLE_COPY.TITLE_ID
-			and RENTAL.COPY_ID = TITLE_COPY.COPY_ID);
+		(select RENTAL_WLX303.TITLE_ID,RENTAL_WLX303.COPY_ID from RENTAL_WLX303
+			where RENTAL_WLX303.EXP_RET_DATE > sysdate
+			and RENTAL_WLX303.TITLE_ID = TITLE_COPY_WLX303.TITLE_ID
+			and RENTAL_WLX303.COPY_ID = TITLE_COPY_WLX303.COPY_ID);
 		commit;
 	end;
 
