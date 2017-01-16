@@ -45,20 +45,6 @@ Java的文件输入输出和JDBC
 
 ## [Java高级功能](Advanced)
 
-## [框架](Framework)
-
-<table>
-    <tr>
-        <td><a href="Framework/Gradle">Gradle</a></td>
-        <td><a href="Framework/JUnit">JUnit</a></td>
-        <td><a href="Framework/Maven">Maven</a></td>
-        <td><a href="Framework/MyBatis">MyBatis</a></td>
-        <td><a href="Framework/Spring">Spring</a></td>
-        <td><a href="Framework/SpringMVC">SpringMVC</a></td>
-        <td><a href="Framework/Log4j">Log4j</a></td>
-    </tr>
-</table>
-
 ## [小项目](Project)
 
 > 参考书目
