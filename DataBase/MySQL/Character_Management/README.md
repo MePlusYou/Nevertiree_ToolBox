@@ -68,13 +68,31 @@ jdbc:mysql://127.0.0.1/databaseName?characterEncoding=UTF-8
 
 3.挑选不同的collation配合`order by`改变排序顺序
 
+使用大小写不敏感的排序
 ```sql
--- 使用大小写不敏感的排序
 select c from t order by c collate latin1_swedish_ci;
--- 使用大小写敏感的排序
+```
+使用大小写敏感的排序
+```sql
 select c from t order by c collate latin1_general_cs;
--- 使用二进制排序法
+```
+使用二进制排序法
+```sql
 select c from t order by c collate latin1_bin;
+```
+在区分大小写的模式下比较大小写不区分的字符串
+```sql
+select
+min(str_col collate latin1_general_cs) as min,
+max(str_col collate latin1_general_cs) as man
+from tbl;
+```
+在不区分大小写的模式下比较大小写区分的字符串
+```sql
+select
+min(str_col collate latin1_swedish_ci) as min,
+max(str_col collate latin1_swedish_ci) as max
+from tbl;
 ```
 
 4.用length()和char_length()判断字符串中是否包含多字节字符
