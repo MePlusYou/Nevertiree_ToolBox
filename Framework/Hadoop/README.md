@@ -2,8 +2,9 @@
 
 参考内容
 
->1.[官方网站](http://hadoop.apache.org/)
->2.Hadoop权威指南
+> [官方网站](http://hadoop.apache.org/)
+> Hadoop权威指南
+> [美团Hadoop安全实践](http://tech.meituan.com/hadoop-security-practice.html)
 
 etc/hadoop/hadoop-env.sh
 

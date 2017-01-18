@@ -2,6 +2,12 @@
 
 Apache Spark™ is a fast and general engine for large-scale data processing.
 
+参考资料
+
+>[Spark性能优化指南——基础篇](http://tech.meituan.com/spark-tuning-basic.html)
+>[Spark性能优化指南——高级篇](http://tech.meituan.com/spark-tuning-pro.html)
+>[Spark在美团的实践](http://tech.meituan.com/spark-in-meituan.html)
+
 ## 目录
 
 ### 1.[Spark基础](Basic)
