@@ -2,9 +2,26 @@
 <?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
 
 <configuration>
+
+	<property>
+		<name>hive.metastore.warehouse.dir</name>
+		<value>/user/hive/warehouse</value>
+		<description>
+			Local or HDFS directory where Hive keeps table contents.
+		</description>
+	</property>
+
+	<property>
+		<name>hive.metastore.local</name>
+		<value>true</value>
+		<description>
+			Use false if a production metasotre server is used.
+		</description>
+	</property>
+
 	<property>
 		<name>javax.jdo.option.ConnectionURL</name>
-		<value>jdbc:mysql://127.0.0.1:3306/hive</value>
+		<value>jdbc:mysql://127.0.0.1:3306/hive_db?createDatabaseIfNotExist=true</value>
 	</property>
 
 	<property>
@@ -14,7 +31,7 @@
 
 	<property>
 		<name>javax.jdo.option.ConnectionUserName</name>
-		<value>hive</value>
+		<value>hive_user</value>
 	</property>
 
 	<property>
