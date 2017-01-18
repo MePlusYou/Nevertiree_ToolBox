@@ -55,6 +55,11 @@ GRANT ALL PRIVILEGES ON hive.* TO hive_user@localhost IDENTIFIED BY "hive_passwo
 拷贝mysql-connector-Java-5.1.13.jar到hive的lib目录下，可以从[maven的官方仓库下载](http://central.maven.org/maven2/mysql/mysql-connector-java)
 
 ```shell
+sudo tar -zxvf mysql-connector-java-5.1.13.jar
+sudo cp mysql-connector-java-5.1.13/mysql-connector-java-5.1.13-bin.jar $HIVE_HOME/lib
+```
+
+```shell
 cd /usr/local/hive/lib
 sudo wget http://central.maven.org/maven2/mysql/mysql-connector-java/x.y.z/mysql-connector-java-x.y.z.jar
 ```
