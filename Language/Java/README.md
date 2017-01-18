@@ -1,8 +1,31 @@
 # Java
 
-## Download & Install
+## 下载与安装
 
+[JDK下载地址](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
 
+1.Linux
+
+选择`Linux x64`版本的`tar.gz`格式文件
+
+把`tar.gz`文件保存在`/usr/local/src`下，然后解压之。
+
+```shell
+sudo tar -xvf jdk-****-linux-x64.tar.gz
+sudo mkdir /usr/local/java
+sudo mv jdk-****-linux-x64 /usr/local/java
+```
+
+在`/etc/profile`中添加JDK的环境变量
+
+```conf
+export JAVA_HOME=/usr/local/java
+export JRE_HOME=${JAVA_HOME}/jre
+export CLASSPATH=.:${JAVA_HOME}/lib:${JRE_HOME}/lib
+export PATH=${JAVA_HOME}/bin:$PATH
+```
+
+使用命令`source /etc/profile`使上述配置生效，用命令行`java -version`验证。
 
 ## [基本内容](Introduction)
 

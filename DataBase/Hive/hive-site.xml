@@ -3,6 +3,7 @@
 
 <configuration>
 
+	<-- 配置HDFS没有充分的信心不要使用-->
 	<property>
 		<name>hive.metastore.warehouse.dir</name>
 		<value>/user/hive/warehouse</value>
@@ -19,24 +20,29 @@
 		</description>
 	</property>
 
+	<-- 配置MySQL-->
 	<property>
 		<name>javax.jdo.option.ConnectionURL</name>
 		<value>jdbc:mysql://127.0.0.1:3306/hive_db?createDatabaseIfNotExist=true</value>
+		<description>MySQL的地址</description>
 	</property>
 
 	<property>
 		<name>javax.jdo.option.ConnectionDriverName</name>
 		<value>com.mysql.jdbc.Driver</value>
+		<description>MySQL驱动的名字</description>
 	</property>
 
 	<property>
 		<name>javax.jdo.option.ConnectionUserName</name>
 		<value>hive_user</value>
+		<description>用户名</description>
 	</property>
 
 	<property>
 		<name>javax.jdo.option.ConnectionPassword</name>
 		<value>hive</value>
+		<description>密码</description>
 	</property>
 
 
