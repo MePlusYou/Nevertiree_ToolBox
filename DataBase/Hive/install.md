@@ -1,8 +1,6 @@
-[csdn1](http://blog.csdn.net/luyee2010/article/details/8466146)
-
-[csdn2](http://blog.csdn.net/wind520/article/details/38638031)
-
 # Hive Install
+
+最终目的是下载并配置Hive，让Hive在Hadoop的本地模式下运行，并且将元数据存储在MySQL中。
 
 ## 1. Download & install Hive
 
@@ -19,7 +17,6 @@ mv hive-x.y.z.tar.gz ../hive
 在/etc/profile中添加PATH和HIVE_HOME
 
 ```shell
-
 sudo vim /etc/profile
 ```
 
@@ -38,6 +35,14 @@ source /etc/profile
 .  /etc/profile
 ```
 
+上述命令也可以写成
+
+```shell
+sudo echo "export HIVE_HOME=/usr/local/hive" > /etc/profile.d/hive.sh
+sudo echo "PATH=$PATH:$HIVE_HOME/bin" >> /etc/profile.d/hive.sh
+. /etc/profile
+```
+
 ## 2.MySQL Configuration
 
 用root登陆，创建hive数据库并且赋予权限给Hive用户
@@ -54,13 +59,19 @@ cd /usr/local/hive/lib
 sudo wget http://central.maven.org/maven2/mysql/mysql-connector-java/x.y.z/mysql-connector-java-x.y.z.jar
 ```
 
+注意下载的格式，如果是tar.gz包或者zip包则要先解压再导入lib目录
+
+```shell
+sudo tar -zvf mysql-connector-java.tar.gz
+```
+
 ## 3.Hive Configuration
 
-修改配置hive-site.xml
+修改配置hive-site.xml，让Hive把元数据存储在MySQL中
 
 ```shell
 cd /usr/local/hive/conf
 vim hive-site.xml
 ```
 
-[hive-site.xml](hive-site.xml)
+配置文件的内容在这里[hive-site.xml](hive-site.xml)。

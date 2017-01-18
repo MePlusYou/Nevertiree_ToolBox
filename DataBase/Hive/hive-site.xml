@@ -4,22 +4,26 @@
 <configuration>
 	<property>
 		<name>javax.jdo.option.ConnectionURL</name>
-		<value>jdbc:mysql://127.0.0.1:3306/hive</value>
+		<value>jdbc:mysql://127.0.0.1:3306/hive?createDatabaseIfNotExist=true</value>
+		<description>MySQL的地址</description>
 	</property>
 
 	<property>
 		<name>javax.jdo.option.ConnectionDriverName</name>
 		<value>com.mysql.jdbc.Driver</value>
+		<description>MySQL驱动的名字</description>
 	</property>
 
 	<property>
 		<name>javax.jdo.option.ConnectionUserName</name>
 		<value>hive</value>
+		<description>用户名</description>
 	</property>
 
 	<property>
 		<name>javax.jdo.option.ConnectionPassword</name>
 		<value>hive</value>
+		<description>密码</description>
 	</property>
 
 
