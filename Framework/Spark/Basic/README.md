@@ -2,33 +2,56 @@
 
 ##1.安装Spark
 
-1.Java 6+
+1.Java 6+ & Python 2.7 因为Hadoop要依赖Java环境，Spark有Python接口
 
-2.Python 2.7
+2.Pre-built for Hadoop 2.4+
 
-3.Pre-built for Hadoop 2.4 and later
+3.[spark-1.2.0.bin-hadoop2.4.tgz](http://spark.apache.org/downloads.html)版本号与Hadoop相同
+```shell
+cd /usr/local/src
+sudo tar -zvxf spark-1.2.0-bin-hadoop2.4.tgz
+sudo mv spark-1.2.0-bin-hadoop2.4/ /usr/local/spark
+```
 
-4.[spark-1.2.0.bin-hadoop2.4.tgz](http://spark.apache.org/downloads.html)
+4.添加SPARK_HOME
 
 ```shell
+sudo vim /etc/profile
+```
 
-cd /usr/local/src
-tar -xf spark-1.2.0-bin-hadoop2.4.tgz
+添加以下配置
 
+```shell
+SPARK_HOME=/usr/local/spark
+PATH=$PATH:${SPARK_HOME}/bin
 ```
 
 ##2.基本操作
 
-打开Python shell `bin/pyspark`
+打开Python shell `bin/pyspark`，打开Scala shell  `bin/spark-shell`，运行外部文件 `bin/spark-submit example.py`
 
-打开Scala shell  `bin/spark-shell`
+退出shell `Ctrl-D`，在文件中结束Spark进层 `sc.stop()`
 
-运行外部文件 `bin/spark-submit example.py`
+在PyCharm中结合使用Spark——
 
-退出shell `Ctrl-D`
+`Run` - `Edit Configurations` - `Configuration` - `Environment variables`
 
-在文件中结束Spark进层 `sc.stop()`
+写入PYTHONPATH为`/usr/local/spark/python`和SPARK_HOME为`/usr/local/spark`
 
+测试语句为（假设python文件名为main.py）
+
+```python
+from pyspark import SparkContext
+
+logFile = "/usr/local/spark/README.md"
+sc = SparkContext("local","main")
+logData = sc.textFile(logFile).cache()
+
+numAs = logData.filter(lambda s: 'a' in s).count()
+numBs = logData.filter(lambda s: 'b' in s).count()
+
+print("Lines with a: %i, lines with b: %i"%(numAs, numBs))
+```
 
 ##3.入门使用
 
