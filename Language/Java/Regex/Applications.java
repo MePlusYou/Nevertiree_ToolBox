@@ -5,10 +5,17 @@ import java.math.*;
 import java.util.regex.*;
 
 public class Solution{
-	public static void main(String[] args){
-		Scanner scan = new Scanner(System.in);
-		String input = scan.nextLine();
+	// 手机号
+	public static boolean correctMobile(String mobile){
+	    Pattern pattern = Pattern.compile("^[\\d]{11}$");
+		Matcher matcher = pattern.matcher(mobile);
+    	return matcher.find();
+    }
 
-
-	}
+    // Email
+    public static boolean correctEmail(String email){
+        Pattern pattern = Pattern.compile("^(\\w)+(\\.\\w+)*@(\\w)+((\\.\\w+)+)$");
+        Matcher matcher = pattern.matcher(email);
+        return matcher.find();
+    }
 }
