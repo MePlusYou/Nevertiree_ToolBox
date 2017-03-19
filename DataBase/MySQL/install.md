@@ -1,6 +1,5 @@
 # 下载MySQL
 
-## Windows
 
 1. 下载并解压ZIP包
 
@@ -8,7 +7,11 @@ MySQL的下载地址在[Download](http://dev.mysql.com/downloads/mysql/)
 
 下载之后再目标地点解压之。
 
-2. 配置`my.ini`文档
+2. 配置
+
+## Windows
+
+配置`my.ini`文档
 
 ```ini
 [mysql]
@@ -29,7 +32,33 @@ character-set-server=utf8
 default-storage-engine=INNODB
 ```
 
+Ubuntu版本
+
+```shell
+cd /etc/mysql/conf.d
+sudo vim mysql.cnf
+```
+
+在cnf中增加
+
+```cnf
+[mysql]
+# 设置mysql客户端默认字符集
+default-character-set=utf8
+
+[mysqld]
+#设置3306端口
+port = 3306
+# 服务端使用的字符集默认为8比特编码的latin1字符集
+character-set-server=utf8
+# 创建新表时将使用的默认存储引擎
+default-storage-engine=INNODB
+
+```
+
 3. MySQL初始化
+
+Window版本
 
 > 如果你想转去E盘根目录的话，直接打E:回车，而不是cd E:回车。
 
@@ -38,6 +67,8 @@ cd E:\mysql\mysql-5.6.17-winx64\bin
 mysqld install
 mysqld --initialize --user=mysql --console
 ```
+
+4. 修改密码
 
 系统自动生成密码，例如`ppPu)E!Br1_a`，第一次登录时输入改密码
 
