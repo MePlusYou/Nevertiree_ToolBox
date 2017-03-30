@@ -2,6 +2,11 @@
 
 二进制字符串类型有：`BINARY` `VARBINARY` `BLOB`，非二进制字符串类型有：`CHAR` `VARCHAR` `TEXT`，其中非二进制类型有`CHARACTER SET`和`COLLATE`属性。
 
+制定数据库的字符串类型
+`
+CREATE DATABASE `tpcms` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+`
+
 1.查看字符串属性
 
 查看系统中全部的字符集，默认字符集是`latin1`
