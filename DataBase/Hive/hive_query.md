@@ -10,7 +10,7 @@ set hive.fetch.task.conversion=more;
 ```
 
 2. 在Linux命令行中使用
-```shell
+```shellmv
 hive --hiveconf hive.fetch.task.conversion=more
 ```
 
